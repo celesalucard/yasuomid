@@ -43,7 +43,7 @@ def post_something():
 # A welcome message to test our server
 @app.route('/')
 def index():
-    return "<h1>Welcome to our server !!</h1>"
+    return render_template('index.html', title='Yasuomid - LOL Analysis App', user=user)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
