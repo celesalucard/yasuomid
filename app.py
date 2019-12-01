@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+import requests
 app = Flask(__name__)
 
 @app.route('/getmsg/', methods=['GET'])
@@ -44,6 +45,22 @@ def post_something():
 @app.route('/')
 def index():
     return render_template('index.html', title='Yasuomid - LOL Analysis App')
+
+@app.route('/matchanal', methods=['GET'])
+def show():
+    if 'match_id' in request.args:
+        match_id = int(request.args['match_id'])
+    else:
+        return "Error: No match field provided. Please specify an match."
+    
+    urlmatch = "https://yasapi.herokuapp.com/match/matches_info?match_id=" + str(match_id)
+    urlparty = "https://yasapi.herokuapp.com/match/participant?match_id=" + str(match_id)
+    
+    
+    matchdata = requests.get(urlmatch)
+    partydata = requests.get(urlparty)
+    y =matchdata.json()['gameDuration']
+    return str(y)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
