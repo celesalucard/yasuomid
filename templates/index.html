@@ -2,12 +2,26 @@
 <html>
    <head>
         <title>YasuoMid</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
    </head>
-   <body>
-      <form action = "{{ request.path }}" method = "POST">
-         <p>Masukan ID Game:</p>
-         <p><input type = "text" name = "gameid" /></p>
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
+   <body style="background-color: #201e21">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main-body">
+                <div id="home">
+                    <img src="../img/home.png" id="home-img" class="rounded mx-auto d-block" alt="login image" width="35%" >
+                </div>
+                <h2 style="text-align: center; color: #41f6eb">YasuoMid</h2>
+                <form action = "{{ request.path }}" method = "POST" style="text-align: center">
+                    <form>
+                        <input type="text" placeholder="Search ID game" name="search" id="search-id">
+                        <button class="btn btn-primary" type="submit" style="background-color: #41f6eb" id="search-btn">Search</button>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
    </body>
 </html>
