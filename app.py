@@ -108,15 +108,9 @@ def matchanal(idgame):
     deaths10 = partydata.json()[9]['deaths'] #int
     assists10 = partydata.json()[9]['assists'] #int
     
+ 
     
-    #untuk tes apakah terintegrasi
-    y = " durasi: " + str(durasi) + "\n id game: " + str(gameId) + "\n gameMode: " + gameMode + "\n gameType: " + gameType + "\n gameVersion: " +gameVersion + "\n mapId: " + str(mapId) + "\n teamWin: " + str(teamWin)
-    return str(y)
-    
-    
-    
-    
-    #return render_template('yasuomid.html',)
+    return render_template('yasuomid.html',gameduration = durasi,gameid = gameId,gamemode = gameMode,gametype = gameType,version = gameVersion,mapid = mapId,win = teamWin,n1 = summonerName1,c1 = championId1,k1 = kills1,d1 = deaths1,a1 = assists1,n2 = summonerName2,c2 = championId2,k2 = kills2,d2 = deaths2,a2 = assists2,n3 = summonerName3,c3 = championId3,k3 = kills3,d3 = deaths3,a3 = assists3,n4 = summonerName4,c4 = championId4,k4 = kills4,d4 = deaths4,a4 = assists4,n5 = summonerName5,c5 = championId5,k5 = kills5,d5 = deaths5,a5 = assists5,n6 = summonerName6,c6 = championId6,k6 = kills6,d6 = deaths6,a6 = assists6,n7 = summonerName7,c7 = championId7,k7 = kills7,d7 = deaths7,a7 = assists7,n8 = summonerName8,c8 = championId8,k8 = kills8,d8 = deaths8,a8 = assists8,n9 = summonerName9,c9 = championId9,d9 = deaths9,a9 = assists9,n10 = summonerName10,c10 = championId10,k10 = kills10,d10 = deaths10,a10 = assists10)
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
