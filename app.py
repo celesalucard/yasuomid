@@ -2,9 +2,13 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, f
 import requests
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
-    return render_template('index.html')
+    if request.method == 'POST':
+        gameid = request.form['gameid']
+        return redirect(url_for('matchanal',idgame = gameid))
+    else:
+        return render_template('index.html')
 
 @app.route('/input', methods=['POST','GET'])
 def input():
