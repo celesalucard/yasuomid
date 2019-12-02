@@ -59,7 +59,25 @@ def show():
     
     matchdata = requests.get(urlmatch)
     partydata = requests.get(urlparty)
-    y =matchdata.json()['gameDuration']
+    
+    
+    #memasukan data ke masing2 variabel agar mudah dipakai
+    
+    #dari urlmatch
+    durasi = matchdata.json()['gameDuration']
+    gameId = matchdata.json()['gameId']
+    gameMode = matchdata.json()['gameMode']
+    gameType = matchdata.json()['gameType']
+    gameVersion = matchdata.json()['gameVersion']
+    mapId = matchdata.json()['mapId']
+    teamWin = matchdata.json()['teamWin']
+    bans = matchdata.json()['bans']
+    
+    
+    
+    
+    
+    y = " durasi: " + str(durasi) + "\n id game: " + str(gameId) + "\n gameMode: " + gameMode + "\n gameType: " + gameType + "\n gameVersion: " +gameVersion + "\n mapId: " + str(mapId) + "\n teamWin: " + str(teamWin)
     return str(y)
 
 if __name__ == '__main__':
