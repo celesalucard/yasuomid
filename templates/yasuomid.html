@@ -2,8 +2,33 @@
 <html>
    <head>
         <title>YasuoMid</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
    </head>
-   <body>
-        <h3>durasi: {{gameduration}} id game: {{gameid}} gameMode: {{gamemode}} gameType: {{gametype}} gameVersion: {{version}} mapId: {{mapid}} teamWin: {{win}} </h3>
+   <body style="background-color: #201e21">
+        <div class="container-fluid">
+            <h2 style="text-align: center; color: #41f6eb">Match Result</h2>
+            <p style="color: whitesmoke">Durasi: {{gameduration}}</p>
+            <p style="color: whitesmoke">Game ID: {{gameid}}</p>
+            <p style="color: whitesmoke">Game Mode: {{gamemode}}</p>
+            <div class="row" id="result-board">
+                <div class="col-6">
+                    <p>{{n1}}:</p>
+                    <p>{{n2}}:</p>
+                    <p>{{n3}}:</p>
+                    <p>{{n4}}:</p>
+                    <p>{{n5}}:</p>
+                </div>
+                <div class="col-6">
+                    <p>{{n6}}:</p>
+                    <p>{{n7}}:</p>
+                    <p>{{n8}}:</p>
+                    <p>{{n9}}:</p>
+                    <p>{{n10}}:</p>
+                </div>
+            </div>
+            <h3>durasi: {{gameduration}} id game: {{gameid}} gameMode: {{gamemode}} gameType: {{gametype}} gameVersion: {{version}} mapId: {{mapid}} teamWin: {{win}} </h3>
+        </div>
    </body>
 </html>
