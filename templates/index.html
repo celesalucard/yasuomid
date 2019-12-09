@@ -4,14 +4,14 @@
         <title>YasuoMid</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/home.css" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" type="text/css">
    </head>
    <body style="background-color: #201e21">
     <div class="container-fluid">
         <div class="row">
             <div class="main-body">
                 <div id="home">
-                    <img src="../img/home.png" id="home-img" class="rounded mx-auto d-block" alt="login image" width="35%" >
+                    <img src="{{ url_for('static', filename='home.png') }}" id="home-img" class="rounded mx-auto d-block" alt="login image" width="35%" >
                 </div>
                 <h2 style="text-align: center; color: #41f6eb">YasuoMid</h2>
                 <form action = "{{ request.path }}" method = "POST" style="text-align: center">
